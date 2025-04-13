@@ -1,0 +1,98 @@
+/* Theme Selector Styling */
+.theme-selector {
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: 2px solid #004e89;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #004e89;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.theme-selector:hover {
+    background-color: rgba(0, 78, 137, 0.1);
+}
+
+.theme-selector option {
+    background-color: #fff;
+    color: #004e89;
+}
+
+/* Default Theme */
+.navbar.default-theme {
+    background-color: #f5ebe0;
+}
+
+.navbar.default-theme .navbar-brand,
+.navbar.default-theme .nav-link,
+.navbar.default-theme .theme-selector {
+    color: #004e89 !important;
+    border-color: #004e89;
+}
+
+/* Dark Theme */
+.navbar.dark-theme {
+    background-color: #000000;
+}
+
+.navbar.dark-theme .navbar-brand,
+.navbar.dark-theme .nav-link,
+.navbar.dark-theme .theme-selector {
+    color: #ffffff !important;
+    border-color: #ffffff;
+}
+
+/* Nature Theme */
+.navbar.nature-theme {
+    background-color: #a3b18a;
+}
+
+.navbar.nature-theme .navbar-brand,
+.navbar.nature-theme .nav-link,
+.navbar.nature-theme .theme-selector {
+    color: #000000 !important;
+    border-color: #000000;
+}
+
+/* Pastel Theme */
+.navbar.pastel-theme {
+    background-color: #d0f4de;
+}
+
+.navbar.pastel-theme .navbar-brand,
+.navbar.pastel-theme .nav-link,
+.navbar.pastel-theme .theme-selector {
+    color: #f8ad9d !important;
+    border-color: #f8ad9d;
+}
+
+/* Modern Theme */
+.navbar.modern-theme {
+    background-color: #252422;
+}
+
+.navbar.modern-theme .navbar-brand,
+.navbar.modern-theme .nav-link,
+.navbar.modern-theme .theme-selector {
+    color: #80ed99 !important;
+    border-color: #80ed99;
+}
+
+/* Hover effects for all themes */
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .theme-selector {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+

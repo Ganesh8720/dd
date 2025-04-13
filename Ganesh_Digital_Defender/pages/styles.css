@@ -1,0 +1,125 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #2b1d1d;
+    margin-bottom: 20px;
+}
+
+.result-area {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #d61919;
+    border-radius: 5px;
+}
+
+.analysis-card {
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(100, 52, 52, 0.1);
+}
+
+.center-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5b5555;
+}
+
+
+/* Image Grid Styling */
+.image-grid {
+    display: grid;
+    gap: 20px;
+    padding: 1rem 0;
+}
+
+/* Responsive columns */
+@media (min-width: 1200px) {
+    .image-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .image-grid img {
+        height: 160px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .image-grid img {
+        height: 140px;
+    }
+}
+
+@media (max-width: 767px) {
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-grid img {
+        height: 120px;
+    }
+}
+
+.image-item {
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.image-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Smooth transition */
+img {
+    transition: all 0.3s ease-in-out;
+}
+

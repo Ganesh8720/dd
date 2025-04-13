@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Defender - Contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+       
+.btn-download {
+    margin-left: 20px;
+    margin: 5px;
+    background-color: #ff6b35; /* Orange background */
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+
+
+.download-text {
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.download-icon {
+    font-size: 1.2em;
+    position: relative;
+    z-index: 2;
+    animation: bounce 1s infinite;
+}
+
+/* Download icon bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Button click effect */
+.btn-download:active {
+    transform: scale(0.95);
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" >Digital Defender</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sample.html">Images</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <select class="theme-selector" id="themeSelector">
+                                <option value="default">Default Theme</option>
+                                <option value="dark">Dark Theme</option>
+                                <option value="nature">Nature Theme</option>
+                                <option value="pastel">Pastel Theme</option>
+                                <option value="modern">Modern Theme</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Home Content -->
+        <div class="content-wrapper">
+            <div class="text-center">
+                <h1 class="welcome-text">Welcome to our<br>Digital Defender Website</h1>
+                <p class="mb-4">Protecting users through advanced detection technology</p>
+                <div class="button-group">
+                    <a href="https://huggingface.co/spaces/Ganesh8720/Digital_Defender_Text_Prediction" target="_blank" class="btn btn-dark btn-lg">Get Started</a>
+                    <a href="https://drive.google.com/drive/folders/1nNfhGb-iLx-16_cn4RAkQ5bTyfuKIXma?usp=sharing" download class="btn btn-download btn-lg" target="_blank">
+                        <span class="download-text">Source Code</span>
+                        <i class="fas fa-download download-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ 
+    <script src="theme.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+    const button = this;
+    button.classList.add('downloading');
+    
+    // Change icon to spinning loading icon
+    const icon = button.querySelector('.download-icon');
+    icon.classList.remove('fa-download');
+    icon.classList.add('fa-spinner');
+    
+    // Reset button after 3 seconds
+    setTimeout(() => {
+        button.classList.remove('downloading');
+        icon.classList.remove('fa-spinner');
+        icon.classList.add('fa-download');
+    }, 3000);
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
